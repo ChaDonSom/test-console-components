@@ -33,7 +33,7 @@ const id = ref(`checkbox-${Math.random().toString(36)}`)
       <div class="mdc-checkbox__ripple"></div>
       <div class="mdc-checkbox__focus-ring"></div>
     </div>
-    <label :for="id"><slot>Checkbox 1</slot></label>
+    <label :for="id"><slot>Checkbox 1</slot> khjgjh</label>
   </div>
 </template>
 

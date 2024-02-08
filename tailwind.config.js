@@ -9,4 +9,5 @@ export default {
     preflight: false,
   },
   prefix: "tcc-",
+  important: true,
 }
