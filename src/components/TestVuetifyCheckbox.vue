@@ -5,7 +5,7 @@ const checkbox = ref(false)
 </script>
 
 <template>
-  <VCheckbox v-model="checkbox"
+  <VCheckbox v-model="checkbox" color="primary"
     ><template #label><slot /></template
   ></VCheckbox>
 </template>
