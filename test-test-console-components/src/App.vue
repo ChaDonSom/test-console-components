@@ -18,7 +18,7 @@ const $tccVariant = inject("$tccVariant")
     <div class="flex flex-col">
       <TestMdcCheckbox>Test MDC checkbox</TestMdcCheckbox>
       <TestM3Checkbox>Test M3 checkbox</TestM3Checkbox>
-      <TestVuetifyCheckbox>Test Vuetify Checkbox</TestVuetifyCheckbox>
+      <TestVuetifyCheckbox color="secondary">Test Vuetify Checkbox</TestVuetifyCheckbox>
     </div>
     <div class="flex flex-col">
       <h3>Test console checkboxes</h3>

@@ -11,8 +11,8 @@ const plugin = createPlugin({
     colors: {
       primary: "#ff0000",
       secondary: "#00ff00",
-      "on-primary": "#ff00ff",
-      "on-secondary": "#ffff00",
+      "on-primary": "#ffffff",
+      "on-secondary": "#000000",
     },
   },
 })
