@@ -11,20 +11,19 @@ npm install
 ## Testing the components
 
 ```sh
-npm link
-cd <path-to-your-vue-project>
-npm link test-console-components
+npm run dev
 ```
 
 ### Your Vue project
 
 ```vue
+<script setup>
+import { TestButton } from "test-console-components"
+</script>
+
 <template>
   <div id="app">
     <TestButton />
   </div>
 </template>
-
-<script>
-import { TestButton } from 'test-console-components'
 ```

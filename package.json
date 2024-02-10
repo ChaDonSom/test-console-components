@@ -16,7 +16,7 @@
     "./dist/index.d.ts": "./dist/index.d.ts"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": ". ./start.sh",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
