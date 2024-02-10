@@ -3,6 +3,8 @@ import { MDCFormField } from "@material/form-field"
 import { MDCCheckbox } from "@material/checkbox"
 import { onMounted, ref } from "vue"
 
+const modelValue = defineModel<boolean | "indeterminate">()
+
 const mdcCheckboxRef = ref<HTMLElement | null>(null)
 const mdcFormFieldRef = ref<HTMLElement | null>(null)
 const checkbox = ref<MDCCheckbox | null>(null)
@@ -23,7 +25,13 @@ const id = ref(`checkbox-${Math.random().toString(36)}`)
 <template>
   <div class="mdc-touch-target-wrapper mdc-form-field" ref="mdcFormFieldRef">
     <div class="mdc-checkbox mdc-checkbox--touch" ref="mdcCheckboxRef">
-      <input type="checkbox" class="mdc-checkbox__native-control" :id="id" />
+      <input
+        type="checkbox"
+        class="mdc-checkbox__native-control"
+        :id="id"
+        :checked="Boolean(modelValue)"
+        @change="modelValue = Boolean(($event.target as HTMLInputElement)?.checked)"
+      />
       <div class="mdc-checkbox__background">
         <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
           <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
@@ -33,7 +41,7 @@ const id = ref(`checkbox-${Math.random().toString(36)}`)
       <div class="mdc-checkbox__ripple"></div>
       <div class="mdc-checkbox__focus-ring"></div>
     </div>
-    <label :for="id"><slot>Checkbox 1</slot> khjgjh</label>
+    <label :for="id"><slot>Checkbox 1</slot></label>
   </div>
 </template>
 
